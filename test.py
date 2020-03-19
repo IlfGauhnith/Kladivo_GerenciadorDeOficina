@@ -4,6 +4,3 @@ from model import Address
 
 db = SQLAlchemyDataSource()
 session = db.get_session()
-
-print(MechanicDataHandler.get_by_id(2))
-

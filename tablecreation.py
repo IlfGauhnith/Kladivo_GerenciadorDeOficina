@@ -143,6 +143,8 @@ class Service(Base):
 
     id = Column(Integer, primary_key=True)
     mechanic_id = Column(Integer, ForeignKey('mechanic.id'))
+    truck_id = Column(Integer, ForeignKey('truck.id'))
+    truck = relationship("Truck", backref=backref("service", uselist=False))
     entry_date = Column(Date)
     entry_time = Column(Time)
     delivery_prevision_date = Column(Date)
